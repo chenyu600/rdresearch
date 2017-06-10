@@ -12,8 +12,8 @@ my $out=shift;
 my $out_file = basename $out;
 my($filename, $dirs, $suffix) = fileparse($out);
 my $err_file = "$dirs/abnormal.sam";
-my $samtools="/ifs4/BC_PUB/biosoft/pipeline/DNA/rdresearch/software/samtools-0.1.19/samtools";
-my $fai="/ifs4/BC_PUB/biosoft/pipeline/DNA/rdresearch/data/bundle_2.8_hg19/ucsc.hg19.fasta.fai";
+my $samtools="/path/samtools";
+my $fai="/path/ucsc.hg19.fasta.fai";
 
 open OT,"| $samtools view -bS - > $out" or die $!;
 #open EOT,"| $samtools view -bS - > $err_file" or die $!;
